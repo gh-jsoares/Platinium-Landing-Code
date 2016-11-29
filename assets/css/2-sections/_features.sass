@@ -1,0 +1,54 @@
+#features
+    display: block
+    .wrapper
+        display: flex
+        .col
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            width: 50%
+            padding: 150px 25px
+            box-sizing: border-box
+            height: 100vh
+            &:first-child
+                background: linear-gradient(#c05c3f, #be5740, #b23e43, #a23647)
+            h2
+                color: $highlight
+                font-weight: 400
+            .active
+                font-weight: 700
+            span
+                content: ""
+                width: 1px
+                height: 100px
+                background: $highlight
+                margin: 25px 0
+            p
+                font-size: 18px
+                color: $text
+                letter-spacing: 1.5px
+                display: block
+                position: absolute
+                top: 0
+                left: 50%
+                right: 0
+                bottom: 0
+                display: flex
+                align-items: center
+                margin: 0 auto
+                padding: 0 5vw
+                transform: translateY(100vh)
+                &:nth-child(2)
+                    transform: translateY(200vh)
+                &:last-child
+                    transform: translateY(300vh)
+        .scrolling
+            position: fixed
+            left: 0
+            right: 50%
+            z-index: 0
+            bottom: 0
+        .scrolled
+            position: relative
+            margin-top: 200vh

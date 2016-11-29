@@ -1,0 +1,43 @@
+#hero
+    display: flex
+    overflow: hidden
+    align-items: center
+    position: relative
+    box-sizing: border-box
+    z-index: 10
+    height: calc(100vh - 75px)
+    background: linear-gradient($overlay, $overlay), url(../img/hero-bg.jpg)
+    background:
+        position: center
+        size: cover
+        repeat: no-repeat
+        attachment: fixed
+
+    .wrapper
+        text-align: center
+        max-width: 620px
+        margin: 0 auto
+        padding: 0 7px
+        h2,
+        h3
+            letter-spacing: 5px
+            color: $highlight
+            font-size: 32px
+            margin-bottom: 10px
+        h3
+            font-weight: 400
+            color: transparentize($highlight, 0.25)
+            letter-spacing: 2.5px
+            font-size: 14px
+            margin-bottom: 40px
+        .button
+            margin: 0 15px
+            &:first-child
+                margin-left: 0
+            &:last-child
+                margin-right: 0
+
+
+@media screen and (max-width: 320px)
+    .button
+        font-size: 10px

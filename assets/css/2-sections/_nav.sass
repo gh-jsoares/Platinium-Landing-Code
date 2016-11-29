@@ -1,0 +1,85 @@
+#nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 15px 30px
+    background: $flat-red
+    z-index: 100
+    position: relative
+    .overlay
+        background: $overlay
+        opacity: 0
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 99
+        position: fixed
+        transition: all .3s ease-in-out
+        pointer-events: none
+        &.open
+            opacity: 1
+    nav
+        z-index: 98
+        a
+            text-decoration: none
+            text-transform: uppercase
+            padding-right: 25px
+            font-size: 14px
+            color: $link
+            transition: all .15s ease-in-out
+            &:hover
+                color: $hover
+        .button
+            color: $link
+            border-color: $link
+
+    #mobile-nav
+        display: none
+        z-index: 100
+    .open
+        span
+            background-color: $flat-red
+
+@media screen and (max-width: 750px) and (min-width: 640px)
+    #nav
+        nav
+            a
+                font-size: 1.5vw
+
+@media screen and (max-width: 640px)
+    body
+        #nav
+            #mobile-nav
+                display: block
+            .open
+                right: 0
+            nav
+                display: block
+                position: fixed
+                top: 0
+                bottom: 0
+                right: -200px
+                width: 200px
+                background: $highlight
+                box-sizing: border-box
+                padding: 80px 25px
+                padding-top: 50vh
+                box-shadow: -1px 0 3px $shadow
+                transition: all .3s ease-in-out
+                z-index: 99
+                a
+                    display: block
+                    text-align: center
+                    padding: 0
+                    margin: 50px 0
+                    color: $flat-red
+                    &:first-child
+                        margin-top: -100px
+                .button
+                    padding: 10px 20px
+                    color: $flat-red
+                    border-color: $flat-red
+                    &:hover
+                        color: $highlight !important
+                        background: $flat-red

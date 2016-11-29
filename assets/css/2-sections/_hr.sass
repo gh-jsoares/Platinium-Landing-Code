@@ -1,0 +1,36 @@
+#hr
+    position: relative
+    background: $dark
+    .wrapper
+        padding: 100px 15px
+        max-width: 640px
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+
+        .content
+            display: flex
+            flex-direction: column
+            color: $flat-red
+            .left
+                align-self: flex-start
+                font-weight: 400
+                transform: translateY(20px)
+            .right
+                align-self: flex-end
+                font-weight: 400
+                transform: translateY(-20px)
+
+        .button
+            text-align: center
+            font-size: 24px
+            max-width: 320px
+            padding: 15px 5vw
+            margin: 25px auto
+
+@media screen and (max-width: 360px)
+    #hr .wrapper .content
+        .left
+            transform: translateY(10vw)
+        .right
+            transform: translateY(-10vw)
